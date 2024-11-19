@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.logo{
+    width: 140px;
+    position: absolute;
+    top: 4%;
+    left: 8%;
+}
+
+
+#sideMenu{
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background: #ffaf3a;
+    z-index: 2;
+    transition: 0.6s;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 50px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#menuOpen{
+    width: 50px;
+    height: 50px;
+    background: #ffaf3a;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    border-radius: 3px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+#menuOpen img{
+    width: 20px;
+    margin-top: 15px;
+}
+.hide{
+    display: none;
+}
+@media screen and (max-width: 770px){
+    .image-container img{
+        max-width: 100%;
+        object-fit: contain;
+        height: 10em;
+    }
+
+    .card{
+        max-width: 10em;
+        margin-top: 1em;
+    }
+
+    #products{
+        grid-template-columns: auto auto;
+        grid-column-gap: 1em;
+    }
+}
+
+.warpper{
+    width: 95%;
+    margin: 0 auto;
+}
+
+#search-container{
+    text-align: center;
+    margin: 1em 0;
+}
+
+#search-container input{
+    background-color:transparent;
+    width: 35%;
+    border-bottom: 2px solid #221f3a;
+    padding: 1em .3em;
+    margin-top: 3em;
+    color: #321321;
+    transition: .275s;
+}
+
+#search-container input:focus{
+    border-bottom-color: #ffa500;
+}
+
+#search-container button{
+    padding: 1.1em 2.1em;
+    margin-left: 1em;
+    background-color: #ffa500;
+    color: #fff;
+    border-radius: 6%;
+    transition: .25s;
+}
+
+#search-container button:hover{
+    background-color: #ff9500;
+}
+
+.btn-value{
+    background-color: transparent;
+    color: #222;
+    border: 2px solid #ffa500;
+    padding: 1em 1.4em;
+    margin-left: 10px;
+    color: #ffa500;
+    border-radius: 35px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.active{
+    background-color: #ffa522;
+    color: white;
+}
+
+#products{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 1.5em;
+    padding: 2em 0;
+}
+
+.card{
+    background-color: #fff;
+    max-width: 18em;
+    margin-top: 1em;
+    padding: 1em;
+    border-radius: 7px;
+    box-shadow: 1em 2em 2.5em rgba(1, 2, 68, 0.08);
+}
+
+.image-container{
+    text-align: center;
+}
+
+.image-container img{
+    max-width: 100%;
+    object-fit: contain;
+    height: 14em;
+}
+
+.container{
+    padding-top: 1em;
+    color: #221f3a;
+}
+
+.container h5{
+    font-weight: 550;
+}

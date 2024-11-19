@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In/Up - Shop Moneky</title>
+    <link rel="stylesheet" href="sign_style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Sign In</button>
+                <button type="button" class="toggle-btn" onclick="register()">Sign Up</button>
+            </div>
+            <div class="social-icons">
+                <img src="images/social-media/Google.png" onclick="signin()">
+                <img src="images/social-media/Instagram.png" onclick="signin()">
+                <img src="images/social-media/Telegram.png" onclick="signin()">
+                <img src="images/social-media/Tiktok.png" onclick="signin()">
+            </div>
+
+            <form class="input-group" id="login">
+                <input type="text" class="input-field" placeholder="Shop ID" required>
+                <input type="password" class="input-field" placeholder="Password" required>
+                <input type="checkbox" class="checkbox"> <span>Rememebr Password</span>
+                <button type="submit" class="submit-btn"  onclick="signin()">Sign In</button>
+            </form>
+            <form class="input-group" id="register">
+                <input type="text" class="input-field" placeholder="Full Name" required>
+                <input type="email" class="input-field" placeholder="Email" required>
+                <input type="password" class="input-field" placeholder="Password" required>
+                <input type="checkbox" class="checkbox"> <span>I agree to the Terms & Conditions</span>
+                <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function register(){
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+
+        function login(){
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+
+        function signin(){
+            const url = 'products.html';
+            window.open(url, '_blank');
+        }
+
+
+
+    </script>
+</body>
+</html>

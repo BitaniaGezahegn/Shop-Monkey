@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Monkey</title>
+    <link rel="stylesheet" href="about_style.css">
+</head>
+<body>
+        <img src="images/logo_invert.png" alt="Company_Logo" class="logo">
+
+        <section id="container">
+            <div class="sider">
+                <h2>About Us</h2>
+                <div class="border"></div>
+                <p><span>&copy</span> Shop Monkey corp. was found on 2003 by Bitania Gezahegn and Andrew Cage since its begining it has been over many changes,
+                    Some Good and some bad but we appreciate you sticking with us, we plan to be the biggest super market by the end of 2025,
+                    Help us Achive that dream and <a href="sign_up.html">Sign Up</a>.
+                </p>
+
+                <h1 class="important">Important Personales</h1>
+                <div class="border"></div>
+                <table>
+                    <tr>
+                        <th>N<u>o</u></th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Branch</th>
+                        <th>Contact</th>
+                        <th>Address</th>
+                        <th>P.O BOX</th>
+                    </tr>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Andrew Cage</td>
+                        <td>LEO</td>
+                        <td>Head Office</td>
+                        <td>+2519342690</td>
+                        <td>Ethiopia, Addis Ababa</td>
+                        <td>23117</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Bitania Gezahegn</td>
+                        <td>CEO</td>
+                        <td>Head Office</td>
+                        <td>+251985134209</td>
+                        <td>Ethiopia, Addis Ababa</td>
+                        <td>77717</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>3</td>
+                        <td>Xion Yo</td>
+                        <td>Assistant Developer</td>
+                        <td>Nilon</td>
+                        <td>(012)-345-4394</td>
+                        <td>Japan, Yokohama</td>
+                        <td>53517</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Tsion Agonafer</td>
+                        <td>Junior Developer</td>
+                        <td>ABOY</td>
+                        <td>+2517389898</td>
+                        <td>Ethiopia, Bahrdar</td>
+                        <td>28112</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+    <!--side navigation-->
+    <div id="sideMenu">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="sign_up.html">Sign In</a></li>
+                <li><a href="order.html">Order</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="menuOpen">
+        <img src="images/menu_open.jpg" id="menuOpenLogo">
+    </div>
+ 
+    <!--Script-->
+    <script>
+        var menuOpen = document.getElementById("menuOpen")
+        var sideMenu = document.getElementById("sideMenu")
+        var menuOpenLogo = document.getElementById("menuOpenLogo")
+
+        sideMenu.style.right = "-250px";
+
+        menuOpen.onclick = function(){
+            if (sideMenu.style.right == "-250px"){
+                sideMenu.style.right = "0";
+                menuOpenLogo.src = "images/menu_close.png";
+            }
+            else {
+                sideMenu.style.right = "-250px";
+                menuOpenLogo.src = "images/menu_open.jpg";
+            }
+        }
+    </script>
+</body>
+</html>

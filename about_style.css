@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.logo{
+    width: 240px;
+    position: absolute;
+    top: 23%;
+    left: 8%;
+    transition: .5s;
+}
+
+.logo:hover{
+    width: 230px;
+    cursor: pointer;
+}
+
+.sider{
+    margin: 3% 0 0 30%;
+    text-align: center;
+    max-width: 800px;
+}
+
+.sider h2{
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.sider p,span,a{
+    color: #5d5d5d;
+    font-family: helvetica, sans-serif;
+}
+
+.sider a{
+    color: #ffaf3a;
+    text-decoration: none;
+}
+
+.sider a:hover{
+    color: #ff5200;
+}
+
+table,th,td{
+    width: 630px;
+    margin: 30px auto;
+    font-size: 18px;
+    padding: 10px 15px;
+    text-align: center;
+    border: 1px solid #5d5d5d;
+    border-collapse:collapse ;
+}
+
+th{
+    font-weight: 600;
+    font-size: 21px;
+}
+
+td{
+    color: #5d5d5d;
+}
+
+td:hover{
+    color: #ffaf3a;
+}
+
+.border{
+    width: 250px;
+    height: 5px;
+    background: #ffaf3a;
+    margin: 20px auto;
+    margin-bottom: 5em;
+    transition: 1s;
+}
+
+.border:hover{
+    width: 400px;
+}
+.important{
+    text-align: center;
+    margin-top: 3.5em;
+    font-size: 1.7em;
+    font-weight: 600;
+}
+
+/*Style of Side NAV*/
+#sideMenu{
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background: #ffaf3a;
+    z-index: 2;
+    transition: 0.6s;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 50px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#menuOpen{
+    width: 50px;
+    height: 50px;
+    background: #ffaf3a;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    border-radius: 3px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+#menuOpen img{
+    width: 20px;
+    margin-top: 15px;
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="order.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <form action="">
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3 class="title">User Info</h3>
+
+                <div class="inputBox">
+                    <span>full name :</span>
+                    <input type="text" placeholder="John White">
+                </div>
+                <div class="inputBox">
+                    <span>email :</span>
+                    <input type="email" placeholder="example@example.com">
+                </div>
+                <div class="inputBox">
+                    <span>address :</span>
+                    <input type="text" placeholder="Ethiopia">
+                </div>
+                <div class="inputBox">
+                    <input type="text" placeholder="mumbai">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>Sub city :</span>
+                        <input type="text" placeholder="Kirkos">
+                    </div>
+                    <div class="inputBox">
+                        <span>zip code :</span>
+                        <input type="text" placeholder="1111">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <h3 class="title">payment</h3>
+
+                <div class="inputBox">
+                    <span>acceptable cards :</span>
+                    <img src="images/card_img.png" alt="">
+                </div>
+                <div class="inputBox">
+                    <span>name of card :</span>
+                    <input type="text" placeholder="mr. john deo">
+                </div>
+                <div class="inputBox">
+                    <span>card number :</span>
+                    <input type="number" placeholder="123456789000">
+                </div>
+                <div class="inputBox">
+                    <span>exp month :</span>
+                    <select id="select-month">
+                        <option value="January" class="drop-down">January</option>
+                        <option value="February" class="drop-down">February</option>
+                        <option value="March" class="drop-down">March</option>
+                        <option value="April" class="drop-down">April</option>
+                        <option value="May" class="drop-down">May</option>
+                        <option value="June" class="drop-down">June</option>
+                        <option value="July" class="drop-down">July</option>
+                        <option value="August" class="drop-down">August</option>
+                        <option value="September" class="drop-down">September</option>
+                        <option value="October" class="drop-down">October</option>
+                        <option value="November" class="drop-down">November</option>
+                        <option value="December" class="drop-down">December</option>
+                    </select>
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>exp year :</span>
+                        <input type="number" placeholder="2022">
+                    </div>
+                    <div class="inputBox">
+                        <span>Shop ID :</span>
+                        <input type="text" placeholder="1234-5678">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <h3 class="title">Product Info</h3>
+
+                <div class="inputBox">
+                    <span>Product name :</span>
+                    <input type="text" placeholder="White Glass">
+                </div>
+
+                <div class="inputBox">
+                    <span>Product Model Year :</span>
+                    <input type="text" placeholder="2023">
+                </div>
+                
+                <div class="inputBox">
+                    <span>Quantity :</span>
+                    <input type="number" placeholder="20">
+                </div>
+
+                <div class="inputBox">
+                    <span>Short Message :</span>
+                    <input type="text" placeholder="I Bought 2 White bag's" class="last-box">
+                </div>
+            </div>
+        </div>
+
+        <a href="Success.html" class="submit-btn" id="proceed">Order Now</a>
+
+        <p id="success"></p>
+
+    </form>
+</div>    
+
+
+<!--sidenav-->
+
+<div id="sideMenu">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="sign_up.html">Sign In</a></li>
+            <li><a href="order.html">Order</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div id="menuOpen">
+    <img src="images/menu_open.jpg" id="menuOpenLogo">
+</div>
+
+<!--Script-->
+<script>
+ 
+</script>
+<script>
+    var menuOpen = document.getElementById("menuOpen")
+    var sideMenu = document.getElementById("sideMenu")
+    var menuOpenLogo = document.getElementById("menuOpenLogo")
+    
+    sideMenu.style.right = "-250px";
+
+    menuOpen.onclick = function(){
+        if (sideMenu.style.right == "-250px"){
+            sideMenu.style.right = "0";
+            menuOpenLogo.src = "images/menu_close.png";
+        }
+        else {
+            sideMenu.style.right = "-250px";
+            menuOpenLogo.src = "images/menu_open.jpg";
+        }
+    }
+
+</script>
+
+</body>
+</html>

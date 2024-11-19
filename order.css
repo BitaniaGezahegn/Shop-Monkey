@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:25px;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #ffaf3a 60%, #ff8d07 40.1%);
+}
+
+.container form{
+  padding:20px;
+  width:1000px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0,0,0,.4);
+  border-radius: 10px;
+}
+
+.container form .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:15px;
+}
+
+.container form .row .col{
+  flex:1 1 250px;
+}
+
+.container form .row .col .title{
+  font-size: 20px;
+  color:#333;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.container form .row .col .inputBox{
+  margin:15px 0;
+}
+
+.container form .row .col .drop-down{
+  margin:15px 0;
+  width: 100%;
+  border:1px solid #ccc;
+  padding:10px 15px;
+  font-size: 15px;
+}
+
+.container form .row .col .inputBox span{
+  margin-bottom: 10px;
+  display: block;
+}
+
+.container form .row .col .inputBox input{
+  width: 100%;
+  border:1px solid #ccc;
+  padding:10px 15px;
+  font-size: 15px;
+  text-transform: none;
+}
+
+.container form .row .col .inputBox input:focus{
+  border:1px solid #ff8d07;
+}
+
+.container form .row .col .flex{
+  display: flex;
+  gap:15px;
+}
+
+.container form .row .col .flex .inputBox{
+  margin-top: 5px;
+}
+
+.container form .row .col .inputBox img{
+  height: 34px;
+  margin-top: 5px;
+  filter: drop-shadow(0 0 1px #000);
+}
+
+.container form .submit-btn{
+  padding:12px 200px;
+  font-size: 17px;
+  background: #ffaf3a;
+  color:#fff;
+  margin-top: 5px;
+  cursor: pointer;
+  margin-left: 23%;
+  text-decoration: none;
+}
+
+.container form .submit-btn:hover{
+  background: #ff8d07;
+}
+
+.last-box{
+  height: 120px;
+}
+
+#sideMenu{
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  right: -250px;
+  top: 0;
+  background: #ffaf3a;
+  z-index: 2;
+  transition: 0.6s;
+}
+
+nav ul li{
+  list-style: none;
+  margin: 50px 20px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: #fff;
+}
+
+#menuOpen{
+  width: 50px;
+  height: 50px;
+  background: #ffaf3a;
+  text-align: center;
+  position: fixed;
+  right: 30px;
+  top: 20px;
+  border-radius: 3px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+#menuOpen img{
+  width: 20px;
+  margin-top: 15px;
+}

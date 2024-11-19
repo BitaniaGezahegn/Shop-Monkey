@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Monkey</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <div id="background-picture">
+      <img src="images/logo.png" alt="Company_Logo" class="logo" />
+
+      <div class="main-text">
+        <h1>Shop Monkey</h1>
+        <p>Shop at Monkey and get Funky</p>
+        <div class="main-button">
+          <a href="sign_up.html"><span></span>Sign In</a>
+          <a href="order.html"><span></span>Order</a>
+        </div>
+      </div>
+      <p id="rights"><span>&copy</span> 2003 - 2023 Bitania Gezahegn</p>
+    </div>
+
+    <!--sidenav-->
+
+    <div id="sideMenu">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="menuOpen">
+      <img src="images/menu_open.jpg" id="menuOpenLogo" />
+    </div>
+
+    <!--Script-->
+    <script>
+      var menuOpen = document.getElementById("menuOpen");
+      var sideMenu = document.getElementById("sideMenu");
+      var menuOpenLogo = document.getElementById("menuOpenLogo");
+
+      sideMenu.style.right = "-250px";
+
+      menuOpen.onclick = function () {
+        if (sideMenu.style.right == "-250px") {
+          sideMenu.style.right = "0";
+          menuOpenLogo.src = "images/menu_close.png";
+        } else {
+          sideMenu.style.right = "-250px";
+          menuOpenLogo.src = "images/menu_open.jpg";
+        }
+      };
+    </script>
+  </body>
+</html>

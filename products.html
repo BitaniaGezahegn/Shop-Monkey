@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Monkey's Products</title>
+    <link rel="stylesheet" href="product_styles.css">
+</head>
+<body>
+        <!--Logo-->
+        <img src="images/logo_invert.png" alt="Company_Logo" class="logo">
+        
+        <!--Search Bar-->
+        <div class="wrapper">
+            <div id="search-container">
+                <input type="search" id="search-input" placeholder="Search for Products">
+                <button id="search">Search</button>
+            </div>
+
+            <div id="buttons">
+                <button class="btn-value" onclick="filterProduct('All')">All</button>
+                <button class="btn-value" onclick="filterProduct('Food')">Food</button>
+                <button class="btn-value"  onclick="filterProduct('Clothing')">Clothing</button>
+                <button class="btn-value"  onclick="filterProduct('Tools')">Tools</button>
+                <button class="btn-value"  onclick="filterProduct('Electronics')">Electronics</button>
+                <button class="btn-value"  onclick="filterProduct('Sports')">Sports</button>
+                <button class="btn-value" onclick="filterProduct('Other')">Other</button>
+            </div>
+        </div>
+        <div id="products"></div>
+
+    <!--Side Navigation-->
+    <div id="sideMenu">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="sign_up.html">Sign In</a></li>
+                <li><a href="order.html">Order</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="menuOpen">
+        <img src="images/menu_open.jpg" id="menuOpenLogo">
+    </div>
+
+    <!--Script-->
+    <script>
+        //defining variables for side menu
+        var menuOpen = document.getElementById("menuOpen")
+        var sideMenu = document.getElementById("sideMenu")
+        var menuOpenLogo = document.getElementById("menuOpenLogo")
+        // making the menu invisible at first
+        sideMenu.style.right = "-250px";
+        // defining what to do when menu icon is clicked
+        menuOpen.onclick = function(){
+            if (sideMenu.style.right == "-250px"){
+                sideMenu.style.right = "0";
+                menuOpenLogo.src = "images/menu_close.png";
+            }
+            else {
+                sideMenu.style.right = "-250px";
+                menuOpenLogo.src = "images/menu_open.jpg";
+            }
+        }
+
+            //defining the products for products.html
+        let products = {
+            data:[
+                {
+                ProductName:"Vinta Backpack",
+                category: "Other",
+                price: "2999",
+                image:"images/products/vinta_backpack.jpg",
+                },
+                {
+                ProductName:"Battlecreek coffee Roasters",
+                category: "Food",
+                price: "249",
+                image:"images/products/coffee_roasters.jpg",
+                },
+                {
+                ProductName:"Nikon Professionals Camera",
+                category: "Electronics",
+                price: "55000",
+                image:"images/products/nikon_camera.jpg",
+                },
+                {
+                ProductName:"Amazon Speaker(Alexa)",
+                category: "Electronics",
+                price: "7000",
+                image:"images/products/jbl_speakers.jpg",
+                },
+                {
+                ProductName:"Blue Sun Shades",
+                category: "Clothing",
+                price: "399",
+                image:"images/products/blue_sun_shade.jpg",
+                },
+                {
+                ProductName:"Fashion Shoe(hills) for women",
+                category: "Clothing",
+                price: "900",
+                image:"images/products/heel_shoe.jpg",
+                },
+                {
+                ProductName:"boxed water",
+                category: "Food",
+                price: "19",
+                image:"images/products/boxed_water.jpg",
+                },
+                //real products
+                {
+                ProductName:"Dining Table",
+                category: "Other",
+                price: "12999",
+                image:"images/products/dining_table.jpg",
+                },
+                {
+                ProductName:"Digital Hand Watch",
+                category: "Electronics",
+                price: "800",
+                image:"images/products/white_hand_watch.jpg",
+                },
+                {
+                ProductName:"DR.Dre's Beats Head Phone",
+                category: "Electronics",
+                price: "2000",
+                image:"images/products/black_headset.jpg",
+                },
+                {
+                ProductName:"Vintage Photograph Camera",
+                category: "Electornics",
+                price: "4000",
+                image:"images/products/vintage_camera.jpg",
+                },
+                {
+                ProductName:"Blue Mens Shoe",
+                category: "Clothing",
+                price: "3800",
+                image:"images/products/mens_blue_shoe.jpg",
+                },
+                {
+                ProductName:"Black Sun Glasses",
+                category: "Clothing",
+                price: "400",
+                image:"images/products/black_sun_shade.jpg",
+                },
+                {
+                ProductName:"Clinique red lipstick",
+                category: "Other",
+                price: "250",
+                image:"images/products/red_lipstick.jpg",
+                },
+                {
+                ProductName:"White Stool (Chair)",
+                category: "Other",
+                price: "1200",
+                image:"images/products/white_stool.jpg",
+                },
+                {
+                ProductName:"Red Nike Sneaker shoe",
+                category: "Clothing",
+                price: "4000",
+                image:"images/products/red_nike.jpg",
+                },
+                {
+                ProductName:"Pepsi Max soft drink",
+                category: "Food",
+                price: "30",
+                image:"images/products/pepsi.jpg",
+                },
+                {
+                ProductName:"potted plant",
+                category: "Other",
+                price: "200",
+                image:"images/products/pot_plant.jpg",
+                },
+                {
+                ProductName:"Vintage car",
+                category: "other",
+                price: "600000",
+                image:"images/products/vintage_car.jpg",
+                },
+                {
+                ProductName:"dUMBELLS",
+                category: "Sports",
+                price: "1000",
+                image: "images/products/dumbells.jpg",
+                },
+                {
+                ProductName:"Green Water Bottle",
+                category: "other",
+                price: "120",
+                image:"images/products/Green_water_bottle.jpg",
+                },
+                {
+                ProductName:"Black Hand Watch",
+                category: "Electronics",
+                price: "600",
+                image:"images/products/black_hand_watch.jpg",
+                },
+                {
+                ProductName:"Black Headphone",
+                category: "Electronics",
+                price: "650",
+                image: "images/products/black_headphones.jpg",
+                },
+                {
+                ProductName:"Xbox joystick",
+                category: "Electronics",
+                price: "650",
+                image: "images/products/xbox_joystick.jpg",
+                },
+                {
+                ProductName:"Black Bycycle",
+                category: "Sports",
+                price: "23000",
+                image: "images/products/black_bycycle.jpg",
+                },
+                {
+                ProductName:"Taylor Alcohol Drink",
+                category: "Food",
+                price: "60",
+                image: "images/products/taylor_beer.jpg",
+                },
+                {
+                ProductName:"Grocery Bag",
+                category: "Tools",
+                price: "5",
+                image: "images/products/grocery_bag.jpg",
+                },
+                {
+                ProductName:"White iphoneX",
+                category: "Electronics",
+                price: "22700",
+                image: "images/products/iphoneX.jpg",
+                },
+                {
+                ProductName:"Wrench",
+                category: "Tools",
+                price: "220",
+                image: "images/products/Wrench.jpg",
+                },
+                {
+                ProductName:"dUMBELLS",
+                category: "Tools",
+                price: "1000",
+                image: "images/products/dumbells.jpg",
+                },
+                {
+                ProductName:"workout rope",
+                category: "Sports",
+                price: "50",
+                image: "images/products/workout_rope.jpg",
+                },
+                {
+                ProductName:"Tennis ball",
+                category: "Sports",
+                price: "230",
+                image: "images/products/tennis_ball.jpg",
+                },
+                {
+                ProductName:"basketballs",
+                category: "Sports",
+                price: "1000",
+                image: "images/products/basketballs.jpg",
+                },
+                {
+                ProductName:"Gaming laptop",
+                category: "Electronics",
+                price: "190000",
+                image: "images/products/gaming_laptop.jpg",
+                },
+                {
+                ProductName:"Gaming Mouse",
+                category: "Electronics",
+                price: "1900",
+                image: "images/products/gaming_mouse.jpg",
+                },
+            ],
+        };
+        //creating a for loop
+        for(let i of products.data){
+            //Creating graphical image with discription
+            let card = document.createElement("div"); //creates a divison element for every product
+            card.classList.add("card",i.category, "hide"); //the cards should have their own class
+            let imgContainer = document.createElement("div");
+            
+            //creating a div for every image and setting everything
+            imgContainer.classList.add("image-container");
+            let image = document.createElement("img");
+            image.setAttribute("src", i.image);
+            imgContainer.appendChild(image);
+            card.appendChild(imgContainer);
+
+            //setting up the container(card container)
+            let container = document.createElement("div");
+            container.classList.add("container");
+            
+            //products name
+            let name = document.createElement("h5");
+            name.classList.add("product-name");
+            name.innerText = i.ProductName.toUpperCase();
+            container.appendChild(name);
+            card.appendChild(container); //this renders the name below the image
+
+            //product price
+            let price = document.createElement("h6");
+            price.innerText =  "$" + i.price;
+            container.appendChild(price); //renders the product's price
+
+            //rendering the products
+            document.getElementById("products").appendChild(card);
+        }
+
+        //accepting commands from filters(buttons)
+        function filterProduct(value){
+            let buttons = document.querySelectorAll(".btn-value");
+            buttons.forEach(button => {
+                if(value.toUpperCase() == button.innerText.toUpperCase()){
+                    button.classList.add("active");
+                }
+                else{
+                    button.classList.remove("active");
+                }
+            });
+
+            //selecting all display cards(boxes)
+            let elements = document.querySelectorAll(".card");
+            elements.forEach(element => {
+                if(value =="all"){
+                    element.classList.remove("hide");
+                } else {
+
+                    if (element.classList.contains(value)) {
+                        //render element depending on its catagory
+                        element.classList.remove("hide");
+                    } else {
+                        element.classList.add("hide");
+                    }
+                }
+            });
+        }
+
+        document.getElementById("search").addEventListener("click", () => {
+            let searchInput = document.getElementById("search-input").value;
+            let elements = document.querySelectorAll(".product-name");
+            let cards = document.querySelectorAll(".card");
+            console.log(searchInput); //just to make sure i am reciving what is typed in the search bar(can cheak it by clicking rightclick => inspect => going to consel => typing some thing and searching it should show up on the consel)
+
+            //looping through every element qne checking
+            elements.forEach((element,index) => {
+                //checking
+                if (element.innerText.includes(searchInput.toUpperCase())) {
+                    //displaying
+                    cards[index].classList.remove("hide");
+                }
+                else{
+                    cards[index].classList.add("hide");
+                }
+            });
+        });
+
+        window.onload = () =>{ //shortcut for function
+            filterProduct('all');
+        }
+    </script>
+</body>
+</html>

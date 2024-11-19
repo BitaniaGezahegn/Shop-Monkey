@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Monkey</title>
+    <link rel="stylesheet" href="services_style.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <img src="images/logo_invert.png" alt="Company_Logo" class="logo">
+        <h1>Shop Monkey's Services</h1>
+        <p>"Shop Monkey is one of the top leading supermarkets in Africa!"</p>
+        <div class="content-box">
+            <div class="cord">
+                <i class="bx bx-bar-chart-alt bx-md"></i>
+                <h2>Fresh Products</h2>
+                <p>Our Products are Very fresh because they come straight from the company(the farmer in some cases),
+                    so you don't have to worry about the freshness of our products and vegitables.
+                </p>
+            </div>
+
+            <div class="cord">
+                <i class="bx bx-bar-chart-alt bx-md"></i>
+                <h2>Great Customer Service</h2>
+                <p>Our Employees are hand picked and trained to the maximum limit to give our customers the 
+                    best experiance that they can get.
+                </p>
+            </div>
+
+            <div class="cord">
+                <i class="bx bx-bar-chart-alt bx-md"></i>
+                <h2>No Expired Products</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptas cumque excepturi odio assumenda quae est vitae quas repudiandae officiis corporis?</p>
+            </div>
+
+            <div class="cord">
+                <i class="bx bx-bar-chart-alt bx-md"></i>
+                <h2>Up to date Products</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptas cumque excepturi odio assumenda quae est vitae quas repudiandae officiis corporis?</p>
+            </div>
+
+            <div class="cord">
+                <i class="bx bx-bar-chart-alt bx-md"></i>
+                <h2>Large Stock</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptas cumque excepturi odio assumenda quae est vitae quas repudiandae officiis corporis?</p>
+            </div>
+
+            <div class="cord">
+                <i class="bx bx-bar-chart-alt bx-md"></i>
+                <h2>Great Price</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptas cumque excepturi odio assumenda quae est vitae quas repudiandae officiis corporis?</p>
+            </div>
+            <hr class="bottom-line">
+            <p class="bottom-text">We offer great products with great price, Good Customer service which you can see by clicking <a href="testimonials.html">this</a> link, We also offer
+                Clean and non expired <a href="products.html">products</a> at one of the most good looking and cleanest supermarkets in the world!,
+                We are up to date with our products and last but not least We offer a large amount of stock items for those who demand!</p>
+        </div>
+    </div>
+
+    <!--sidenav-->
+
+    <div id="sideMenu">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="sign_up.html">Sign In</a></li>
+                <li><a href="order.html">Order</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="menuOpen">
+        <img src="images/menu_open.jpg" id="menuOpenLogo">
+    </div>
+ 
+    <!--Script-->
+    <script>
+        var menuOpen = document.getElementById("menuOpen")
+        var sideMenu = document.getElementById("sideMenu")
+        var menuOpenLogo = document.getElementById("menuOpenLogo")
+
+        sideMenu.style.right = "-250px";
+
+        menuOpen.onclick = function(){
+            if (sideMenu.style.right == "-250px"){
+                sideMenu.style.right = "0";
+                menuOpenLogo.src = "images/menu_close.png";
+            }
+            else {
+                sideMenu.style.right = "-250px";
+                menuOpenLogo.src = "images/menu_open.jpg";
+            }
+        }
+    </script>
+</body>
+</html>

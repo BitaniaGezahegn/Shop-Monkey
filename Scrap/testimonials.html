@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Monkey</title>
+    <link rel="stylesheet" href="testimonials_style.css">
+</head>
+<body>
+    <div class="health">
+        <div id="logo-container">
+            <img src="images/logo.png" alt="Company_Logo" class="logo">
+        </div>
+        <h1>Testimonial</h1>
+
+        <div class="container">
+            <div class="indicator">
+                <span class="btn"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+            </div>
+            <div class="testimonial">
+                <!--adding users-->
+                <div class="slide-row">
+                    <div class="slide-col">
+                        <div class="user-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                            . Sequi, facilis atque? Ipsa, nulla culpa! Nostrum.
+                            <h3>Navya Borah</h3>
+                            <p>India, Mumbai</p>
+                        </div>
+                        <div class="user-pic">
+                            <img src="images/Profile_pictures/pp1.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="slide-col">
+                        <div class="user-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                            . Sequi, facilis atque? Ipsa, nulla culpa! Nostrum.
+                            <h3>Cristina L<span>&#246</span>pez</h3>
+                            <p>Netherland,Rotterdam</p>
+                        </div>
+                        <div class="user-pic">
+                            <img src="images/Profile_pictures/pp2.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="slide-col">
+                        <div class="user-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                            . Sequi, facilis atque? Ipsa, nulla culpa! Nostrum.
+                            <h3>Denzel, Brown</h3>
+                            <p>South Africa, Johannesburg</p>
+                        </div>
+                        <div class="user-pic">
+                            <img src="images/Profile_pictures/pp3.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="slide-col">
+                        <div class="user-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                            . Sequi, facilis atque? Ipsa, nulla culpa! Nostrum.
+                            <h3>Dr.Russel Peters</h3>
+                            <p>United States, Ohio</p>
+                        </div>
+                        <div class="user-pic">
+                            <img src="images/Profile_pictures/pp4.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="slide-col">
+                        <div class="user-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                            . Sequi, facilis atque? Ipsa, nulla culpa! Nostrum.
+                            <h3>Malik McDonald</h3>
+                            <p>Kenya, Kisumu</p>
+                        </div>
+                        <div class="user-pic">
+                            <img src="images/Profile_pictures/pp5.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--sidenav-->
+
+    <div id="sideMenu">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="menuOpen">
+        <img src="images/menu_open.jpg" id="menuOpenLogo">
+    </div>
+ 
+    <!--Script-->
+    <script>
+        var menuOpen = document.getElementById("menuOpen")
+        var sideMenu = document.getElementById("sideMenu")
+        var menuOpenLogo = document.getElementById("menuOpenLogo")
+
+        sideMenu.style.right = "-250px";
+
+        menuOpen.onclick = function(){
+            if (sideMenu.style.right == "-250px"){
+                sideMenu.style.right = "0";
+                menuOpenLogo.src = "images/menu_close.png";
+            }
+            else {
+                sideMenu.style.right = "-250px";
+                menuOpenLogo.src = "images/menu_open.jpg";
+            }
+        }
+    </script>
+</body>
+</html>
